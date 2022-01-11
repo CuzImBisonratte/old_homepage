@@ -1,0 +1,144 @@
+/* import of "Dosis" (font to use) */
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');
+
+/* settings for the whole page */
+
+:root {
+    --start-background-color: #222255;
+    --about-background-color: #225522;
+    --projects-background-color: #552222;
+    --body-background-color: #ffffff;
+    --nav-background-color: #000000;
+    --text-color: #ffffff;
+    --title-color: #ffffff;
+    --nav-text-color: #ffffff;
+    --extra-color: #ffffff;
+}
+
+* {
+    transition: 0.5s;
+}
+
+body {
+    color: var(--text-color);
+    font-family: Dosis;
+    transition: 0.5s;
+    background-color: var(--body-background-color);
+    margin: 0px;
+}
+
+
+/* Deactivate link decoration */
+
+a {
+    text-decoration: none;
+}
+
+
+/* Menüknöpfe (auf/zu) einfärben */
+
+#navOpener {
+    color: var(--text-color);
+    position: fixed;
+}
+
+#navOpenerButton {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#navCloseButton {
+    cursor: pointer;
+}
+
+
+/*navigations-menu */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    background-color: var(--nav-background-color);
+}
+
+
+/* Design für die Links im Menü */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--nav-text-color);
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: var(--extra-color);
+}
+
+.sidenav .navClosebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+/* Einstellungen, für den Inhalt der seite (ausgenommen Menü) */
+
+#main {
+    transition: margin-left .5s;
+}
+
+
+/* Bei kleinen bildschirmen Menü anpassen */
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+/* All rules */
+
+hr {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+
+/* The pages */
+
+.page {
+    /* Set it to the full screen height */
+    height: 100vh;
+    /* Center horizontally and vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#start {
+    background-color: var(--start-background-color);
+}
+
+#about {
+    background-color: var(--about-background-color);
+}
+
+#projects {
+    background-color: var(--projects-background-color);
+}
