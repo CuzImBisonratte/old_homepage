@@ -126,17 +126,68 @@ hr {
     /* Set it to the full screen height */
     height: 100vh;
     /* Center horizontally and vertically */
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 #start {
     background-color: var(--start-background-color);
 }
 
+.title {
+    padding-left: 15%;
+    padding-top: 10%;
+    font-size: 3.5vh;
+}
+
+#starttext {
+    padding-left: 20%;
+    font-size: 2.5vh;
+}
+
+#downlink {
+    padding-top: 1vh;
+}
+
+#down {
+    border-radius: 10px;
+    padding: 2vh;
+    /* Set background color */
+    background-color: var(--extra-color);
+    border: 0px;
+    font-size: 2vh;
+    /* Center horizontally and vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#down>i {
+    margin-left: 1vw;
+}
+
 #about {
     background-color: var(--about-background-color);
+}
+
+#abouttext {
+    padding-left: 7.5vw;
+    font-size: 2.5vh;
+}
+
+#abouttext>ul {
+    padding-left: 5%;
+    font-size: 2.5vh;
+}
+
+#person_image {
+    position: absolute;
+    height: 30vh;
+    width: 30vh;
+    right: 10vw;
+    top: 130vh;
+    border-radius: 15%;
 }
 
 #projects {
