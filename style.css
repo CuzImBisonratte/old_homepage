@@ -153,11 +153,11 @@ hr {
     font-size: 2.5vh;
 }
 
-#downlink {
+.downlink {
     padding-top: 1vh;
 }
 
-#down {
+.down {
     border-radius: 10px;
     padding: 2vh;
     /* Set background color */
@@ -170,7 +170,7 @@ hr {
     justify-content: center;
 }
 
-#down>i {
+.down>i {
     margin-left: 1vw;
 }
 
@@ -199,6 +199,32 @@ hr {
 
 #projects {
     background-color: var(--projects-background-color);
+}
+
+#projectstext {
+    padding-left: 10%;
+    font-size: 2.5vh;
+}
+
+.projects_link {
+    padding-top: 1vh;
+}
+
+.projects_link_button {
+    border-radius: 10px;
+    padding: 2vh;
+    /* Set background color */
+    background-color: var(--extra-color);
+    border: 0px;
+    font-size: 2vh;
+    /* Center horizontally and vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects_link_button>i {
+    margin-left: 1vw;
 }
 
 #up_button {
