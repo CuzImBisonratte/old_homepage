@@ -28,22 +28,72 @@ function darkLightChange() {
     }
 }
 
-// Function to get the Age
-function getAge() {
+
+
+
+// Birthday with the current year (25.01)
+var year = new Date()
+var birthDate = new Date(year.getFullYear(), 0, 25, 08, 18, 00);
+
+// Function to check for dates
+function getDates() {
 
     // Get the current date
     var today = new Date();
 
-    // Get the birth date (25.01.2008 08:18:00)
-    var birthDate = new Date(2008, 0, 25, 8, 18, 0);
 
-    // Calculate the difference between the two dates
-    var diff = today.getTime() - birthDate.getTime();
+    // Check if the birthday is within the next 24 hours to 2 hours
+    if (birthDate.getTime() - today.getTime() < 86400000 && birthDate.getTime() - today.getTime() > 7200000) {
 
-    // Calculate the age
-    var age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+        // Get a countdown in the format hh:mm:ss
+        var difference = new Date(birthDate.getTime() - today.getTime());
 
-    // Insert it into the page
-    document.getElementById("age").innerHTML = age + " Jahre alt,";
+        // Create the countdown
+        var countdown = "" + difference.getUTCHours() + ":" + difference.getUTCMinutes() + ":" + difference.getUTCSeconds();
+
+        // Insert it into the page
+        document.getElementById("occassion").innerHTML = countdown;
+        document.getElementById("occassion").style.display = "block";
+
+        // Self rerun
+        window.setTimeout("getDates();", 1000);
+
+        // Insert the Age into the page
+        document.getElementById("age").innerHTML = age + " Jahre alt,";
+
+        // If not, check if the birthday is within the next 2 hours
+    } else if (birthDate.getTime() - today.getTime() < 7200000 && birthDate.getTime() - today.getTime() > 0) {
+
+        // Get a countdown in the format hh:mm:ss
+        var difference = new Date(birthDate.getTime() - today.getTime());
+
+        // Create the countdown
+        var countdown = "" + difference.getUTCHours() + ":" + difference.getUTCMinutes() + ":" + difference.getUTCSeconds();
+
+        // Replace the full page with the countdown
+        document.body.innerHTML = "<h1>" + countdown + "</h1>";
+
+        document.body.classList.add('occassion');
+
+        // Add this script to the page
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'script.js';
+
+        document.head.appendChild(script);
+    } else {
+
+        // This is what happens if no event is happening
+
+        // Calculate the difference between the two dates
+        var diff = today.getTime() - birthDate.getTime();
+
+        // Calculate the age
+        var age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+
+        // Insert the Age into the page 
+        document.getElementById("age").innerHTML = age + " Jahre alt,";
+    }
+
 }
-getAge();
+getDates();
