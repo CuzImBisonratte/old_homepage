@@ -27,3 +27,23 @@ function darkLightChange() {
             break;
     }
 }
+
+// Function to get the Age
+function getAge() {
+
+    // Get the current date
+    var today = new Date();
+
+    // Get the birth date (25.01.2008 08:18:00)
+    var birthDate = new Date(2008, 0, 25, 8, 18, 0);
+
+    // Calculate the difference between the two dates
+    var diff = today.getTime() - birthDate.getTime();
+
+    // Calculate the age
+    var age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+
+    // Insert it into the page
+    document.getElementById("age").innerHTML = age + " Jahre alt,";
+}
+getAge();
