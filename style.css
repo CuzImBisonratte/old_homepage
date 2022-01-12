@@ -48,11 +48,10 @@ a {
     position: fixed;
     top: 0.5vh;
     left: 0.5vw;
-    font-size: 1vw;
 }
 
 #navOpenerButton {
-    font-size: 30px;
+    font-size: 3vw;
     cursor: pointer;
 }
 
