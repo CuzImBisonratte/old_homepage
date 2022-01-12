@@ -153,11 +153,11 @@ hr {
     font-size: 2.5vh;
 }
 
-.downlink {
+#downlink {
     padding-top: 1vh;
 }
 
-.down {
+#down {
     border-radius: 10px;
     padding: 2vh;
     /* Set background color */
@@ -170,7 +170,7 @@ hr {
     justify-content: center;
 }
 
-.down>i {
+#down>i {
     margin-left: 1vw;
 }
 
