@@ -9,11 +9,17 @@
     --about-background-color: #225522;
     --projects-background-color: #552222;
     --body-background-color: #ffffff;
-    --nav-background-color: #000000;
+    --nav-background-color: #222222;
     --text-color: #ffffff;
     --title-color: #ffffff;
     --nav-text-color: #ffffff;
     --extra-color: #ffffff;
+}
+
+html {
+    background-color: #000000;
+    scrollbar-color: #343434 #000;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -23,7 +29,6 @@
 body {
     color: var(--text-color);
     font-family: Dosis;
-    transition: 0.5s;
     background-color: var(--body-background-color);
     margin: 0px;
 }
@@ -41,6 +46,9 @@ a {
 #navOpener {
     color: var(--text-color);
     position: fixed;
+    top: 0.5vh;
+    left: 0.5vw;
+    font-size: 1vw;
 }
 
 #navOpenerButton {
