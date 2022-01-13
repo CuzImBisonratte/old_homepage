@@ -5,90 +5,110 @@
 /* settings for the whole page */
 
 :root {
+    /* Variable for the start section */
     --start-background-color: #222255;
+    /* Variable for the about section */
     --about-background-color: #225522;
+    /* Variable for the projects section */
     --projects-background-color: #552222;
-    --body-background-color: #ffffff;
+    /* Variable for the body background color */
+    --body-background-color: #000000;
+    /* Variable for the navigation background color */
     --nav-background-color: #222222;
+    /* Variable for the standart text color */
     --text-color: #ffffff;
+    /* Variable fot the standart title-text color */
     --title-color: #ffffff;
+    /* Variable for the text in the navigation */
     --nav-text-color: #ffffff;
+    /* Variable for other extra elements */
     --extra-color: #ffffff;
 }
 
-html {
-    background-color: #000000;
-    scrollbar-color: #343434 #000;
-    scroll-behavior: smooth;
-}
+
+/* Settings on ALL elements */
 
 * {
+    /* Add a transition */
     transition: 0.5s;
 }
 
+
+/* Settings for the whole html */
+
+html {
+    /* Change the scrollbar color */
+    scrollbar-color: #343434 #000;
+    /* activate smooth scrolling */
+    scroll-behavior: smooth;
+}
+
+
+/* Settings for the whole body */
+
 body {
+    /* Set text color */
     color: var(--text-color);
+    /* Set font-family */
     font-family: Dosis;
+    /* Set background color */
     background-color: var(--body-background-color);
+    /* Add spacing around the elements */
     margin: 0px;
+    /* Stretch to full height */
     height: 100%;
 }
 
 
-/* Deactivate link decoration */
+/* all links */
 
 a {
+    /* disable text decoration */
     text-decoration: none;
 }
 
 
-/* Menüknöpfe (auf/zu) einfärben */
-
-#navOpener {
-    color: var(--text-color);
-    position: fixed;
-    top: 0.5vh;
-    left: 0.5vw;
-}
-
-#navOpenerButton {
-    font-size: 3vw;
-    cursor: pointer;
-}
-
-#navCloseButton {
-    cursor: pointer;
-}
-
-
-/*navigations-menu */
+/* navigation parent element */
 
 .sidenav {
-    height: 100%;
+    /* Stretch over full height */
+    height: 100vh;
+    /* Don't show the nav standart */
     width: 0;
+    /* Position the element fixed */
     position: fixed;
+    /* Get the menu on top of the page */
     z-index: 1;
+    /* Position the element */
     top: 0;
     left: 0;
+    /* Remove scroll-bar */
     overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.5s;
+    /* Add padding on the top */
+    padding-top: 5vh;
+    /* Add background-color */
     background-color: var(--nav-background-color);
 }
 
 
-/* Design für die Links im Menü */
+/* navigation links */
 
 .sidenav a {
+    /* Add space around the texts */
     padding: 8px 8px 8px 32px;
-    text-decoration: none;
+    /* Set font size */
     font-size: 25px;
+    /* Set text-color */
     color: var(--nav-text-color);
+    /* Set display type */
     display: block;
-    transition: 0.3s;
 }
 
+
+/* navigation links on hover */
+
 .sidenav a:hover {
+    /* Set text color */
     color: var(--extra-color);
 }
 
@@ -98,12 +118,37 @@ a {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+    cursor: pointer;
 }
 
 
-/* Einstellungen, für den Inhalt der seite (ausgenommen Menü) */
+/* Parent element of the navigation opener button */
+
+#navOpener {
+    /* Set text color */
+    color: var(--text-color);
+    /* Position the button fixed */
+    position: fixed;
+    /* Position it */
+    top: 0.5vh;
+    left: 0.5vw;
+}
+
+
+/* The navigation opener button */
+
+#navOpenerButton {
+    /* Set the font-size */
+    font-size: 3vh;
+    /* Set cursor type */
+    cursor: pointer;
+}
+
+
+/* Settings for the whole page (without the sidenav) */
 
 #main {
+    /* Add a transition */
     transition: margin-left .5s;
 }
 
@@ -111,33 +156,42 @@ a {
 /* Message div */
 
 #occassion {
+    /* Normally don't display */
     display: none;
+    /* Stretch about full width */
     width: 100%;
+    /* Set height to be header banner */
     height: 5vh;
+    /* Set background color */
     background-color: var(--projects-background-color);
+    /* Set text Color */
     color: var(--text-color);
+    /* Set text to be center aligned */
     text-align: center;
+    /* Set font size */
     font-size: 4vh;
 }
 
-
-/* Check if the body has the class "occassion" */
-
 html>.occassion {
+    /* Set background color */
     background-color: var(--projects-background-color);
+    /* Set text Color */
     color: var(--text-color);
-    /* Center everything vertically and horizontally */
+    /* Center all elements vertically and horizontally */
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Stretch over the full page */
     width: 100%;
     height: 100vh;
+    /* Set a font size */
     font-size: 25vh;
+    /* Don't display the cursor */
     cursor: none;
 }
 
 
-/* Bei kleinen bildschirmen Menü anpassen */
+/* Correct sidenav on smaller screens */
 
 @media screen and (max-height: 450px) {
     .sidenav {
@@ -149,50 +203,63 @@ html>.occassion {
 }
 
 
-/* All rules */
-
-hr {
-    margin-top: 5em;
-    margin-bottom: 5em;
-}
-
-
 /* The pages */
 
 .page {
     /* Set it to the full screen height */
     height: 100vh;
-    /* Center horizontally and vertically */
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 
+
+/* The start page */
+
 #start {
+    /* Set the background color */
     background-color: var(--start-background-color);
 }
 
+
+/* Settings for the title */
+
 .title {
-    padding-left: 15%;
+    /* Add a padding */
+    padding-left: 10vw;
     padding-top: 10%;
+    /* Set font size */
     font-size: 3.5vh;
 }
 
-#starttext {
-    padding-left: 20%;
+
+/* All text sections */
+
+.inner_text {
+    /* Add a padding from the left */
+    padding-left: 15%;
+    /* Set font size */
     font-size: 2.5vh;
 }
 
+
+/* The parent element for each of the buttons to get down */
+
 .downlink {
+    /* Add a space from the top */
     padding-top: 1vh;
 }
 
+
+/* The buttons to get down */
+
 .down {
-    border-radius: 10px;
+    /* Add rounded corners */
+    border-radius: 2vh;
+    /* Add space around the element */
     padding: 2vh;
     /* Set background color */
     background-color: var(--extra-color);
+    /* Remove the border */
     border: 0px;
+    /* Set the font size */
     font-size: 2vh;
     /* Center horizontally and vertically */
     display: flex;
@@ -200,52 +267,68 @@ hr {
     justify-content: center;
 }
 
+
+/* The icon inside the buttons */
+
 .down>i {
+    /* Add a space on the left */
     margin-left: 1vw;
 }
 
+
+/* The section in which informations about the person are */
+
 #about {
+    /* Set the background color */
     background-color: var(--about-background-color);
 }
 
-#abouttext {
-    padding-left: 7.5vw;
-    font-size: 2.5vh;
-}
 
-#abouttext>ul {
-    padding-left: 5%;
-    font-size: 2.5vh;
-}
+/* Image of the person */
 
 #person_image {
+    /* Set the position absolute */
     position: absolute;
+    /* Add a height and width */
     height: 30vh;
     width: 30vh;
+    /* Add space from the right */
     right: 10vw;
+    /* Add space from the top */
     top: 130vh;
+    /* Add rounded corners */
     border-radius: 15%;
 }
 
+
+/* The section in which the short description of the projects is */
+
 #projects {
+    /* Set the background color */
     background-color: var(--projects-background-color);
 }
 
-#projectstext {
-    padding-left: 10%;
-    font-size: 2.5vh;
-}
+
+/* The parent element around the button to project informations */
 
 .projects_link {
+    /* Add a spacing from the top */
     padding-top: 1vh;
 }
 
+
+/* The button element */
+
 .projects_link_button {
-    border-radius: 10px;
+    /* Add rounded corners */
+    border-radius: 2vh;
+    /* Add space around the element */
     padding: 2vh;
     /* Set background color */
     background-color: var(--extra-color);
+    /* Remove the border */
     border: 0px;
+    /* Set the font size */
     font-size: 2vh;
     /* Center horizontally and vertically */
     display: flex;
@@ -253,21 +336,37 @@ hr {
     justify-content: center;
 }
 
+
+/* All icons in the projects_link_button */
+
 .projects_link_button>i {
+    /* Add a space on the left */
     margin-left: 1vw;
 }
 
+
+/* The button to get to the top of the page */
+
 #up_button {
+    /* Set the position to be fixed */
     position: fixed;
+    /* Make the button round */
     border-radius: 50%;
+    /* Add a space around the box */
     padding: 1vh;
+    /* Position the button */
     bottom: 1vw;
     right: 1vw;
+    /* Set width and height */
     height: 1.5vh;
     width: 1.5vh;
+    /* Set background color */
     color: #000;
+    /* Set font color */
     background-color: var(--extra-color);
+    /* Set font size */
     font-size: 100%;
+    /* Center the icon within it */
     align-items: center;
     justify-content: center;
 }
