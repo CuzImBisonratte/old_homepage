@@ -42,7 +42,6 @@ function getDates() {
     // Get the current date
     var today = new Date();
 
-
     // Check if the birthday is within the next 24 hours to 2 hours
     if (birthDate.getTime() - today.getTime() < 86400000 && birthDate.getTime() - today.getTime() > 7200000) {
 
@@ -92,8 +91,6 @@ function getDates() {
     // Calculate the age
     var age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
 
-    // Insert the Age into the page 
-        // Insert the Age into the page 
     // Insert the Age into the page 
     document.getElementById("age").innerHTML = age + " Jahre alt,";
 
