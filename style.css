@@ -23,6 +23,8 @@
     --nav-text-color: #ffffff;
     /* Variable for other extra elements */
     --extra-color: #ffffff;
+    /* Variable for nav hover effect */
+    --nav-hover-color: #dad9aa;
 }
 
 
@@ -109,7 +111,7 @@ a {
 
 .sidenav a:hover {
     /* Set text color */
-    color: var(--extra-color);
+    color: var(--nav-hover-color);
 }
 
 .sidenav .navClosebtn {
