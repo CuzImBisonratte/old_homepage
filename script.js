@@ -97,12 +97,8 @@ function getDates() {
 
         document.body.classList.add('occassion');
 
-        // Add this script to the page
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'script.js';
-
-        document.head.appendChild(script);
+        // Self rerun
+        window.setTimeout("getDates();", 1000);
     }
 
     // This is what happens if no event is happening
