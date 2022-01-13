@@ -28,7 +28,19 @@ function darkLightChange() {
     }
 }
 
+// Function to format the time
+function formatTime(number) {
 
+    // If the number is not 2 digits, add a 0 in front
+    if (number.toString().length <= 1) {
+
+        // Add a 0 in front
+        number = "0" + number;
+    }
+
+    // return the formatted number
+    return number;
+}
 
 
 // Birthday with the current year (25.01)
@@ -48,8 +60,13 @@ function getDates() {
         // Get a countdown in the format hh:mm:ss
         var difference = new Date(birthDate.getTime() - today.getTime());
 
+        // Get the hours, minutes and seconds from the countdown
+        var hours = formatTime(difference.getUTCHours());
+        var minutes = formatTime(difference.getUTCMinutes());
+        var seconds = formatTime(difference.getUTCSeconds());
+
         // Create the countdown
-        var countdown = "" + difference.getUTCHours() + ":" + difference.getUTCMinutes() + ":" + difference.getUTCSeconds();
+        var countdown = "" + hours + ":" + minutes + ":" + seconds;
 
         // Insert it into the page
         document.getElementById("occassion").innerHTML = countdown;
@@ -67,8 +84,13 @@ function getDates() {
         // Get a countdown in the format hh:mm:ss
         var difference = new Date(birthDate.getTime() - today.getTime());
 
+        // Get the hours, minutes and seconds from the countdown
+        var hours = formatTime(difference.getUTCHours());
+        var minutes = formatTime(difference.getUTCMinutes());
+        var seconds = formatTime(difference.getUTCSeconds());
+
         // Create the countdown
-        var countdown = "" + difference.getUTCHours() + ":" + difference.getUTCMinutes() + ":" + difference.getUTCSeconds();
+        var countdown = "" + hours + ":" + minutes + ":" + seconds;
 
         // Replace the full page with the countdown
         document.body.innerHTML = "<h1>" + countdown + "</h1>";
