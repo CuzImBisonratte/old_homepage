@@ -263,9 +263,14 @@ hr {
     padding: 1.5vh;
     bottom: 1vw;
     right: 1vw;
-    color: var(--extra-color);
-    background-color: #000;
-    font-size: 1vw;
+    height: 1.5vh;
+    width: 1.5vh;
+    color: #000;
+    background-color: var(--extra-color);
+    font-size: 1.5vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
