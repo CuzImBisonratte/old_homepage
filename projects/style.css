@@ -34,7 +34,7 @@
 
 * {
     /* Add a transition */
-    transition: 0.5s;
+    /* transition: 0.5s; Removed bc. unneeded on static size-unimpacted page */
 }
 
 
