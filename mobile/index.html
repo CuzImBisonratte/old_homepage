@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuzImBisonratte</title>
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+</head>
+
+<body>
+
+    <!-- Content of the navigation-bar -->
+    <div id="sideNav" class="sidenav">
+        <span id="navCloseButton" class="navClosebtn" onclick="closeNav()">&times;</span>
+        <a href="#start">Start</a>
+        <a href="#about">&Uuml;ber mich</a>
+        <a href="#projects">Projekte</a>
+        <a href="#footer">Kontakt</a>
+        <a>-----</a>
+        <a href='../legal/imprint.html'>Impressum</a>
+        <a href='../legal/imprint.html#privacy'>Datenschutz</a>
+    </div>
+
+    <!-- Button to open the navigation-bar -->
+    <div id="navOpener">
+        <span id="navOpenerButton" onclick="openNav()">&#9776;</span>
+    </div>
+
+    <!-- Main content of the site -->
+    <div id="main">
+
+        <div id="occassion">
+            Nothing to see here...
+        </div>
+
+        <div class="page" id="start">
+            <div class="title">
+                <h1>CuzImBisonratte</h1>
+            </div>
+            <div class="inner_text">
+                Hey, willkommen auf meiner Website
+                <br>
+                <br>
+                <a class="downlink" href="#about">
+                    <button class="down">Über mich<i class="far fa-caret-square-down"></i></button>
+                </a><br>
+                <a class="downlink" href="#projects">
+                    <button class="down">Meine Projekte<i class="far fa-caret-square-down"></i></button>
+                </a>
+            </div>
+        </div>
+        <div class="page" id="about">
+            <div class="title">
+                <h1>&Uuml;ber mich</h1>
+            </div>
+            <div class="inner_text">
+                Mein Name ist Konstantin,
+                <br> ich bin <span id="age">2008 Geboren,</span>
+                <br> ich komme aus Baden-Württemberg
+                <br> und bin
+                <ul>
+                    <li>Programmierer</li>
+                    <li>Online-Creator</li>
+                    <li>Gamer</li>
+                    <li>Sch&uuml;ler</li>
+                </ul>
+                <br>
+            </div>
+        </div>
+        <div class="page" id="projects">
+            <div class="title">
+                <h1>Meine Projekte</h1>
+            </div>
+            <div class="inner_text">
+                Ob einfache Skripte, Spiele, Websites,
+                <br> ganze Chat-Apps oder Sonstiges,
+                <br> ich versuche es zu programmieren.</span>
+                <br>
+                <br> Meine aktuellsten Projekte sind:
+                <ul>
+                    <li>Wudsim</li>
+                    <li>themes.js</li>
+                    <li>homeUI</li>
+                    <li>Diese Website</li>
+                </ul>
+                <br>
+                <!-- <a class="projects_link" href="./projects/"> -->
+                <a class="projects_link" onclick="projects();">
+                    <button class="projects_link_button">Weitere Informationen<i class="fas fa-sign-in-alt"></i></button>
+                </a>
+            </div>
+
+        </div>
+        </footer>
+
+        <!-- The button that leads to  -->
+        <a href="#start">
+            <i id="up_button" class="far fa-caret-square-up"></i>
+        </a>
+    </div>
+
+    <!-- Add the main script (script.js) -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
