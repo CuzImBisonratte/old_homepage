@@ -148,6 +148,31 @@ a {
     cursor: pointer;
 }
 
+#home {
+    /* Set text color */
+    color: var(--text-color);
+    /* Position the button fixed */
+    position: fixed;
+    /* Position it */
+    top: 0.5vh;
+    right: 0.5vw;
+}
+
+#homeButton {
+    /* Set the font-size */
+    font-size: 3vh;
+    /* Set cursor type */
+    cursor: pointer;
+}
+
+#homeButton>i {
+    margin-right: 0.5vw;
+}
+
+#homeButton:hover {
+    color: var(--nav-hover-color);
+}
+
 
 /* Settings for the whole page (without the sidenav) */
 

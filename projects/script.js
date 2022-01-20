@@ -114,3 +114,8 @@ function getDates() {
 
 }
 getDates();
+
+// Function to get to ../
+function home() {
+    window.location.href = "../";
+}
