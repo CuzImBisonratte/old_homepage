@@ -114,3 +114,7 @@ function getDates() {
 
 }
 getDates();
+
+function projects() {
+    alert("Projekteübersicht kommt bald!");
+}
