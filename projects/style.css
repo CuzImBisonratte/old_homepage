@@ -1,0 +1,367 @@
+/* import of "Dosis" (font to use) */
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');
+
+/* settings for the whole page */
+
+:root {
+    /* Variable for the start section */
+    --start-background-color: #222255;
+    /* Variable for the wudsim section */
+    --wudsim-background: #225522;
+    /* Variable for the themesjs section */
+    --themesjs-background: #552222;
+    /* Variable for the sharesimple section */
+    --sharesimple-background: #525252;
+    /* Variable for the body background color */
+    --body-background-color: #000000;
+    /* Variable for the navigation background color */
+    --nav-background-color: #222222;
+    /* Variable for the standart text color */
+    --text-color: #ffffff;
+    /* Variable fot the standart title-text color */
+    --title-color: #ffffff;
+    /* Variable for the text in the navigation */
+    --nav-text-color: #ffffff;
+    /* Variable for other extra elements */
+    --extra-color: #ffffff;
+    /* Variable for nav hover effect */
+    --nav-hover-color: #dad9aa;
+}
+
+
+/* Settings on ALL elements */
+
+* {
+    /* Add a transition */
+    transition: 0.5s;
+}
+
+
+/* Settings for the whole html */
+
+html {
+    /* Change the scrollbar color */
+    scrollbar-color: #343434 #000;
+    /* activate smooth scrolling */
+    scroll-behavior: smooth;
+}
+
+
+/* Settings for the whole body */
+
+body {
+    /* Set text color */
+    color: var(--text-color);
+    /* Set font-family */
+    font-family: Dosis;
+    /* Set background color */
+    background-color: var(--body-background-color);
+    /* Add spacing around the elements */
+    margin: 0px;
+    /* Stretch to full height */
+    height: 100%;
+}
+
+
+/* all links */
+
+a {
+    /* disable text decoration */
+    text-decoration: none;
+}
+
+
+/* navigation parent element */
+
+.sidenav {
+    /* Stretch over full height */
+    height: 100vh;
+    /* Don't show the nav standart */
+    width: 0;
+    /* Position the element fixed */
+    position: fixed;
+    /* Get the menu on top of the page */
+    z-index: 1;
+    /* Position the element */
+    top: 0;
+    left: 0;
+    /* Remove scroll-bar */
+    overflow-x: hidden;
+    /* Add padding on the top */
+    padding-top: 5vh;
+    /* Add background-color */
+    background-color: var(--nav-background-color);
+}
+
+
+/* navigation links */
+
+.sidenav a {
+    /* Add space around the texts */
+    padding: 8px 8px 8px 32px;
+    /* Set font size */
+    font-size: 25px;
+    /* Set text-color */
+    color: var(--nav-text-color);
+    /* Set display type */
+    display: block;
+}
+
+
+/* navigation links on hover */
+
+.sidenav a:hover {
+    /* Set text color */
+    color: var(--nav-hover-color);
+}
+
+.sidenav .navClosebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+
+/* Parent element of the navigation opener button */
+
+#navOpener {
+    /* Set text color */
+    color: var(--text-color);
+    /* Position the button fixed */
+    position: fixed;
+    /* Position it */
+    top: 0.5vh;
+    left: 0.5vw;
+}
+
+
+/* The navigation opener button */
+
+#navOpenerButton {
+    /* Set the font-size */
+    font-size: 3vh;
+    /* Set cursor type */
+    cursor: pointer;
+}
+
+
+/* Settings for the whole page (without the sidenav) */
+
+#main {
+    /* Add a transition */
+    transition: margin-left .5s;
+}
+
+
+/* Message div */
+
+#occassion {
+    /* Normally don't display */
+    display: none;
+    /* Stretch about full width */
+    width: 100%;
+    /* Set height to be header banner */
+    height: 5vh;
+    /* Set background color */
+    background-color: var(--themesjs-background);
+    /* Set text Color */
+    color: var(--text-color);
+    /* Set text to be center aligned */
+    text-align: center;
+    /* Set font size */
+    font-size: 4vh;
+}
+
+html>.occassion {
+    /* Set background color */
+    background-color: var(--themesjs-background);
+    /* Set text Color */
+    color: var(--text-color);
+    /* Center all elements vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Stretch over the full page */
+    width: 100%;
+    height: 100vh;
+    /* Set a font size */
+    font-size: 25vh;
+    /* Don't display the cursor */
+    cursor: none;
+}
+
+
+/* Correct sidenav on smaller screens */
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+/* The pages */
+
+.page {
+    /* Set it to the full screen height */
+    height: 100vh;
+}
+
+
+/* The start page */
+
+#start {
+    /* Set the background color */
+    background-color: var(--start-background-color);
+}
+
+
+/* Settings for the title */
+
+.title {
+    /* Add a padding */
+    padding-left: 10vw;
+    padding-top: 10%;
+    /* Set font size */
+    font-size: 3.5vh;
+}
+
+
+/* All text sections */
+
+.inner_text {
+    /* Add a padding from the left */
+    padding-left: 15%;
+    /* Set font size */
+    font-size: 2.5vh;
+}
+
+
+/* The parent element for each of the buttons to get down */
+
+.downlink {
+    /* Add a space from the top */
+    padding-top: 1vh;
+}
+
+
+/* The buttons to get down */
+
+.down {
+    /* Add rounded corners */
+    border-radius: 2vh;
+    /* Add space around the element */
+    padding: 2vh;
+    /* Set background color */
+    background-color: var(--extra-color);
+    /* Remove the border */
+    border: 0px;
+    /* Set the font size */
+    font-size: 2vh;
+    /* Center horizontally and vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* The icon inside the buttons */
+
+.down>i {
+    /* Add a space on the left */
+    margin-left: 1vw;
+}
+
+
+/* The section in which informations about the person are */
+
+#wudsim {
+    /* Set the background color */
+    background-color: var(--wudsim-background);
+}
+
+
+/* The section in which the short description of the projects is */
+
+#themesjs {
+    /* Set the background color */
+    background-color: var(--themesjs-background);
+}
+
+
+/* The section in which the short description of the projects is */
+
+#sharesimple {
+    /* Set the background color */
+    background-color: var(--sharesimple-background);
+}
+
+
+/* The parent element around the button to project informations */
+
+.link {
+    /* Add a spacing from the top */
+    padding-top: 1vh;
+}
+
+
+/* The button element */
+
+.link_button {
+    /* Add rounded corners */
+    border-radius: 2vh;
+    /* Add space around the element */
+    padding: 2vh;
+    /* Set background color */
+    background-color: var(--extra-color);
+    /* Remove the border */
+    border: 0px;
+    /* Set the font size */
+    font-size: 2vh;
+    /* Center horizontally and vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* All icons in the projects_link_button */
+
+.link_button>i {
+    /* Add a space on the left */
+    margin-left: 1vw;
+}
+
+
+/* The button to get to the top of the page */
+
+#up_button {
+    /* Set the position to be fixed */
+    position: fixed;
+    /* Make the button round */
+    border-radius: 50%;
+    /* Add a space around the box */
+    padding: 1vh;
+    /* Position the button */
+    bottom: 1vw;
+    right: 1vw;
+    /* Set width and height */
+    height: 1.5vh;
+    width: 1.5vh;
+    /* Set background color */
+    color: #000;
+    /* Set font color */
+    background-color: var(--extra-color);
+    /* Set font size */
+    font-size: 100%;
+    /* Center the icon within it */
+    align-items: center;
+    justify-content: center;
+}
