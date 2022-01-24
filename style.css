@@ -159,7 +159,7 @@ a {
 
 #main {
     /* Add a transition */
-    transition: margin-left .5s;
+    transition: margin-left 0.25s;
 }
 
 
