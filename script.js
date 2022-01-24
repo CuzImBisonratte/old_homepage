@@ -126,3 +126,7 @@ if (checkMobile() || window.innerWidth < 900) {
     // goto ./mobile/
     window.location.href = "./mobile/";
 }
+
+
+// Right copyright year
+document.getElementById("copyright").innerHTML = "&copy; " + new Date().getFullYear() + " CuzImBisonratte";
