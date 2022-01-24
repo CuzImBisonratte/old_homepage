@@ -97,9 +97,9 @@ a {
 
 .sidenav a {
     /* Add space around the texts */
-    padding: 8px 8px 8px 32px;
+    padding: 1vh 1vw 1vh 3vw;
     /* Set font size */
-    font-size: 25px;
+    font-size: 3vh;
     /* Set text-color */
     color: var(--nav-text-color);
     /* Set display type */
@@ -117,8 +117,8 @@ a {
 .sidenav .navClosebtn {
     position: absolute;
     top: 0;
-    right: 25px;
-    font-size: 36px;
+    right: 10%;
+    font-size: 5vh;
     margin-left: 50px;
     cursor: pointer;
 }

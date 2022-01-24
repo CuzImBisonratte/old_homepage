@@ -1,7 +1,7 @@
 // menu opening and closing
 function openNav() {
-    document.getElementById("sideNav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("sideNav").style.width = "20vw";
+    document.getElementById("main").style.marginLeft = "20vw";
 }
 
 function closeNav() {
