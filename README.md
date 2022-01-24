@@ -8,3 +8,6 @@ Some links don't work, because they would lead to an page with Information about
 
 # Live Date
 This website is planned to go live end of january 2021 or start of february 2021.
+
+# Online Preview 
+You can find the online preview of the website [here](https://cuzimbisonratte.github.io/homepage-new/).
