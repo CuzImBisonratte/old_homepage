@@ -49,10 +49,15 @@ function formatTime(number) {
 }
 
 
+
+
 // Birthday with the current year (25.01)
-var year = new Date()
-var birthDate = new Date(year.getFullYear(), 0, 25, 08, 18, 00);
 var birth = new Date(2008, 0, 25, 08, 18, 00);
+
+// Create the var "birthDate" with the values from "birth" but the current year
+var year = new Date();
+var birthDate = new Date(year.getFullYear(), birth.getMonth(), birth.getDate(), birth.getHours(), birth.getMinutes(), birth.getSeconds());
+
 
 // Function to check for dates
 function getDates() {
@@ -60,53 +65,56 @@ function getDates() {
     // Get the current date
     var today = new Date();
 
-    // Check if the birthday is within the next 24 hours to 2 hours
-    if (birthDate.getTime() - today.getTime() < 86400000 && birthDate.getTime() - today.getTime() > 7200000) {
+    // Check if the birthday has'nt already passed this year
+    if (today.getTime() > birthDate.getTime()) {} else {
 
-        // Get a countdown in the format hh:mm:ss
-        var difference = new Date(birthDate.getTime() - today.getTime());
+        // Check if the birthday is within the next 24 hours to 2 hours
+        if (birthDate.getTime() - today.getTime() < 86400000 && birthDate.getTime() - today.getTime() > 7200000) {
 
-        // Get the hours, minutes and seconds from the countdown
-        var hours = formatTime(difference.getUTCHours());
-        var minutes = formatTime(difference.getUTCMinutes());
-        var seconds = formatTime(difference.getUTCSeconds());
+            // Get a countdown in the format hh:mm:ss
+            var difference = new Date(birthDate.getTime() - today.getTime());
 
-        // Create the countdown
-        var countdown = "" + hours + ":" + minutes + ":" + seconds;
+            // Get the hours, minutes and seconds from the countdown
+            var hours = formatTime(difference.getUTCHours());
+            var minutes = formatTime(difference.getUTCMinutes());
+            var seconds = formatTime(difference.getUTCSeconds());
 
-        // Insert it into the page
-        document.getElementById("occassion").innerHTML = countdown;
-        document.getElementById("occassion").style.display = "block";
+            // Create the countdown
+            var countdown = "" + hours + ":" + minutes + ":" + seconds;
 
-        // Self rerun
-        window.setTimeout("getDates();", 1000);
+            // Insert it into the page
+            document.getElementById("occassion").innerHTML = countdown;
+            document.getElementById("occassion").style.display = "block";
 
-        // Insert the Age into the page
-        document.getElementById("age").innerHTML = age + " Jahre alt,";
+            // Self rerun
+            window.setTimeout("getDates();", 1000);
 
-        // If not, check if the birthday is within the next 2 hours
-    } else if (birthDate.getTime() - today.getTime() < 7200000 && birthDate.getTime()) {
+            // Insert the Age into the page
+            document.getElementById("age").innerHTML = age + " Jahre alt,";
 
-        // Get a countdown in the format hh:mm:ss
-        var difference = new Date(birthDate.getTime() - today.getTime());
+            // If not, check if the birthday is within the next 2 hours
+        } else if (birthDate.getTime() - today.getTime() < 7200000 && birthDate.getTime()) {
 
-        // Get the hours, minutes and seconds from the countdown
-        var hours = formatTime(difference.getUTCHours());
-        var minutes = formatTime(difference.getUTCMinutes());
-        var seconds = formatTime(difference.getUTCSeconds());
+            // Get a countdown in the format hh:mm:ss
+            var difference = new Date(birthDate.getTime() - today.getTime());
 
-        // Create the countdown
-        var countdown = "" + hours + ":" + minutes + ":" + seconds;
+            // Get the hours, minutes and seconds from the countdown
+            var hours = formatTime(difference.getUTCHours());
+            var minutes = formatTime(difference.getUTCMinutes());
+            var seconds = formatTime(difference.getUTCSeconds());
 
-        // Replace the full page with the countdown
-        document.body.innerHTML = "<h1>" + countdown + "</h1>";
+            // Create the countdown
+            var countdown = "" + hours + ":" + minutes + ":" + seconds;
 
-        document.body.classList.add('occassion');
+            // Replace the full page with the countdown
+            document.body.innerHTML = "<h1>" + countdown + "</h1>";
 
-        // Self rerun
-        window.setTimeout("getDates();", 1000);
+            document.body.classList.add('occassion');
+
+            // Self rerun
+            window.setTimeout("getDates();", 1000);
+        }
     }
-
     // This is what happens if no event is happening
 
     // Calculate the difference between the two dates
