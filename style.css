@@ -28,14 +28,6 @@
 }
 
 
-/* Settings on ALL elements */
-
-* {
-    /* Add a transition */
-    /* transition: 0.5s; Removed bc. unneeded on static size-unimpacted page */
-}
-
-
 /* Settings for the whole html */
 
 html {
