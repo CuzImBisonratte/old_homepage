@@ -44,9 +44,12 @@ function formatTime(number) {
 
 
 // Birthday with the current year (25.01)
-var year = new Date()
-var birthDate = new Date(year.getFullYear(), 0, 25, 08, 18, 00);
 var birth = new Date(2008, 0, 25, 08, 18, 00);
+
+// Create the var "birthDate" with the values from "birth" but the current year
+var year = new Date();
+var birthDate = new Date(year.getFullYear(), birth.getMonth(), birth.getDate(), birth.getHours(), birth.getMinutes(), birth.getSeconds());
+
 
 // Function to check for dates
 function getDates() {
