@@ -11,3 +11,11 @@
     width: 5vh;
     font-size: 5.25vh;
 }
+
+#copyright {
+    font-size: 2.5vh;
+    position: absolute;
+    margin-top: 100%;
+    text-align: center;
+    width: 100%;
+}
