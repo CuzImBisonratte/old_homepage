@@ -5,3 +5,9 @@
 #sidenav * {
     text-align: center !important;
 }
+
+#up_button {
+    height: 5vh;
+    width: 5vh;
+    font-size: 5.25vh;
+}
