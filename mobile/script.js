@@ -1,12 +1,18 @@
 // menu opening and closing
 function openNav() {
-    document.getElementById("sideNav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("sideNav").style.width = "100vw";
+    document.getElementById("main").style.marginLeft = "100vw";
+
+    // Hide overflow
+    document.body.style.overflow = "hidden";
 }
 
 function closeNav() {
     document.getElementById("sideNav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
+
+    // Show overflow
+    document.body.style.overflow = "visible";
 }
 
 // Set default for changed ( if dark/light comparison has changed ) to false
