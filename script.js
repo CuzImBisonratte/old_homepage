@@ -28,6 +28,17 @@ function darkLightChange() {
     }
 }
 
+function scroll(where) {
+    switch (where) {
+        case "about":
+            document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+            break;
+        case "projects":
+            document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+            break;
+    };
+}
+
 // Function to format the time
 function formatTime(number) {
 
