@@ -265,6 +265,8 @@ html>.occassion {
     font-size: 2vh;
     /* Add space on the top */
     margin-top: 2vh;
+    /* Change the cursor to let the buttons look clickable */
+    cursor: pointer;
 }
 
 
@@ -314,6 +316,8 @@ html>.occassion {
 .projects_link {
     /* Add a spacing from the top */
     padding-top: 1vh;
+    /* Change the cursor to let the buttons look clickable */
+    cursor: pointer;
 }
 
 
