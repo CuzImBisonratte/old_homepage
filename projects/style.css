@@ -7,8 +7,8 @@
 :root {
     /* Variable for the start section */
     --start-background-color: #222255;
-    /* Variable for the wudsim section */
-    --wudsim-background: #225522;
+    /* Variable for the sqowey section */
+    --sqowey-background: #225522;
     /* Variable for the themesjs section */
     --themesjs-background: #552222;
     /* Variable for the sharesimple section */
@@ -307,9 +307,9 @@ html>.occassion {
 
 /* The section in which informations about the person are */
 
-#wudsim {
+#sqowey {
     /* Set the background color */
-    background-color: var(--wudsim-background);
+    background-color: var(--sqowey-background);
 }
 
 
